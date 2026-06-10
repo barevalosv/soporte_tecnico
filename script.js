@@ -4,21 +4,26 @@ const inputProblema = document.getElementById('problema');
 const btnAbrir = document.getElementById('btnAbrir');
 const listaTickets = document.getElementById('listaTickets');
 const contadorElemento = document.getElementById('contador');
+const mensajeError = document.getElementById('mensajeError');
 
 // 2. Estado de la aplicación
 let totalTickets = 0;
 
 // 3. Función principal para añadir el ticket
 function registrarTicket() {
-    // Capturamos los valores eliminando espacios en blanco innecesarios
     const equipo = inputEquipo.value.trim();
     const problema = inputProblema.value.trim();
 
-    // VALIDACIÓN: Si alguno está vacío, saltamos alert y frenamos la ejecución
+    // VALIDACIÓN MODIFICADA: En lugar de alert, mostramos el div
     if (equipo === "" || problema === "") {
-        alert("⚠️ Por favor, rellena tanto el nombre del equipo como el problema.");
+        mensajeError.style.display = "block"; // Muestra el error
         return; 
     }
+
+    // Si pasa la validación, ocultamos el error por si estuviera visible
+    mensajeError.style.display = "none";
+
+    // ... (El resto de tu código para sumar contador y crear el li se queda igual)
 
     // EL CEREBRO: Sumamos +1 al contador y actualizamos la pantalla
     totalTickets++;

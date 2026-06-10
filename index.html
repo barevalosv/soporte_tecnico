@@ -15,11 +15,14 @@
             Total Tickets: <span id="contador">0</span>
         </div>
 
-        <div class="formulario">
-            <input type="text" id="equipo" placeholder="Ej. Ordenador 04, Portátil 2...">
-            <input type="text" id="problema" placeholder="Ej. No enciende, Pantallazo azul...">
-            <button id="btnAbrir">Abrir Ticket</button>
+    <div class="formulario">
+        <input type="text" id="equipo" placeholder="Ej. Ordenador 04, Portátil 2...">
+        <input type="text" id="problema" placeholder="Ej. No enciende, Pantallazo azul...">
+        <button id="btnAbrir">Abrir Ticket</button>
+        <div id="mensajeError" style="color: #e74c3c; text-align: center; font-weight: bold; display: none;">
+        ⚠️ Por favor, rellena todos los campos.
         </div>
+    </div>
 
         <h2>Historial de Incidencias</h2>
         <ul id="listaTickets">
